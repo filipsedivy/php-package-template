@@ -30,7 +30,7 @@
 	"scripts": {
 		"phpstan": "phpstan analyse --level 9 src/ tests/",
 		"phpunit": "phpunit --configuration phpunit.xml.dist",
-		"ecs": "ecs check --config ecs.php",
-		"ecs-fix": "ecs check --config ecs.php --fix"
+		"ecs": "ecs check",
+		"ecs-fix": "ecs check --fix"
 	}
 }
