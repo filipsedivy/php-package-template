@@ -1,32 +1,36 @@
 {
-    "name": "filipsedivy/php-package-template",
-    "description": "Package description",
-    "license": "MIT",
-    "type": "library",
-    "minimum-stability": "stable",
-    "autoload": {
-        "psr-4": {
-            "FilipSedivy\\PhpPackageTemplate\\": "src/",
+	"name": "filipsedivy/php-package-template",
+	"description": "Package description",
+	"license": "MIT",
+	"type": "library",
+	"minimum-stability": "stable",
+	"autoload": {
+		"psr-4": {
+			"FilipSedivy\\PhpPackageTemplate\\": "src/",
 			"FilipSedivy\\PhpPackageTemplate\\Tests\\": "tests/"
-        }
-    },
-    "authors": [
-        {
-            "name": "Filip Sedivy",
-            "email": "mail@filipsedivy.cz"
-        }
-    ],
-    "require": {
-        "php": ">=7.4"
-    },
-    "require-dev": {
+		}
+	},
+	"authors": [
+		{
+			"name": "Filip Sedivy",
+			"email": "mail@filipsedivy.cz"
+		}
+	],
+	"require": {
+		"php": ">=7.4",
+		"symplify/easy-coding-standard": "^10.0",
+		"nette/coding-standard": "^3.2"
+	},
+	"require-dev": {
 		"phpstan/phpstan": "^1.0",
 		"phpstan/phpstan-deprecation-rules": "^1.0.0",
 		"phpstan/phpstan-strict-rules": "^1.0.0",
-        "phpunit/phpunit": "^9.5"
+		"phpunit/phpunit": "^9.5"
 	},
-    "scripts": {
-        "phpstan": "phpstan analyse --level 9 src/ tests/",
-		"phpunit": "phpunit --configuration phpunit.xml.dist"
-    }
+	"scripts": {
+		"phpstan": "phpstan analyse --level 9 src/ tests/",
+		"phpunit": "phpunit --configuration phpunit.xml.dist",
+		"ecs": "ecs check --config ecs.php",
+		"ecs-fix": "ecs check --config ecs.php --fix"
+	}
 }

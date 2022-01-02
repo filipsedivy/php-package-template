@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace FilipSedivy\PhpPackageTemplate\Tests;
 
 use FilipSedivy\PhpPackageTemplate;
@@ -9,7 +11,7 @@ class ExampleTest extends TestCase
 {
     public function testExample(): void
     {
-        $example = new PhpPackageTemplate\Example;
+        $example = new PhpPackageTemplate\Example();
 
         $this->assertSame('bar', $example->foo());
     }
