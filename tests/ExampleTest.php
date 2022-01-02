@@ -7,7 +7,7 @@ use PHPUnit\Framework\TestCase;
 
 class ExampleTest extends TestCase
 {
-    public function testExample()
+    public function testExample(): void
     {
         $example = new PhpPackageTemplate\Example;
 
