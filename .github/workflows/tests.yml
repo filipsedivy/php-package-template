@@ -1,20 +1,16 @@
-name: Coding Style
+name: Tests
 
 on: [ push, pull_request ]
 
 jobs:
-  cs:
-    name: Coding Standard
+  build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: shivammathur/setup-php@v2
-        with:
-          php-version: 7.4
-          coverage: none
       - name: Install dependencies
         uses: php-actions/composer@v6
         with:
           php_version: 7.4
+      - uses: php-actions/phpunit@v3
 
-      - run: php vendor/bin/ecs check src --preset php74
+      - run: composer phpunit

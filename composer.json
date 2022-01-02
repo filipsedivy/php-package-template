@@ -6,7 +6,8 @@
     "minimum-stability": "stable",
     "autoload": {
         "psr-4": {
-            "FilipSedivy\\PhpPackageTemplate\\": "src/"
+            "FilipSedivy\\PhpPackageTemplate\\": "src/",
+			"FilipSedivy\\PhpPackageTemplate\\Tests\\": "tests/"
         }
     },
     "authors": [
@@ -19,20 +20,13 @@
         "php": ">=7.4"
     },
     "require-dev": {
-        "nette/tester": "^2.0",
-        "symfony/thanks": "^1",
-        "phpstan/phpstan": "^1.0",
-        "nette/coding-standard": "^3.0"
-    },
+		"phpstan/phpstan": "^1.0",
+		"phpstan/phpstan-deprecation-rules": "^1.0.0",
+		"phpstan/phpstan-strict-rules": "^1.0.0",
+        "phpunit/phpunit": "^9.5"
+	},
     "scripts": {
         "phpstan": "phpstan analyse --level 9 src/ tests/",
-        "check-cs": "ecs check src --config tests/coding-standards.php",
-        "fix-cs": "ecs check src --config tests/coding-standards.php --fix"
-    },
-    "config": {
-        "allow-plugins": {
-            "symfony/thanks": true,
-            "dealerdirect/phpcodesniffer-composer-installer": true
-        }
+		"phpunit": "phpunit --configuration phpunit.xml.dist"
     }
 }

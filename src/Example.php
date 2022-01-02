@@ -6,4 +6,8 @@ namespace FilipSedivy\PhpPackageTemplate;
 
 class Example
 {
+    public function foo(): string
+    {
+        return 'bar';
+    }
 }
