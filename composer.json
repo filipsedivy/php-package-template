@@ -1,0 +1,38 @@
+{
+    "name": "filipsedivy/php-package-template",
+    "description": "Package description",
+    "license": "MIT",
+    "type": "library",
+    "minimum-stability": "stable",
+    "autoload": {
+        "psr-4": {
+            "FilipSedivy\\PhpPackageTemplate\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Filip Sedivy",
+            "email": "mail@filipsedivy.cz"
+        }
+    ],
+    "require": {
+        "php": ">=7.4"
+    },
+    "require-dev": {
+        "nette/tester": "^2.0",
+        "symfony/thanks": "^1",
+        "phpstan/phpstan": "^1.0",
+        "nette/coding-standard": "^3.0"
+    },
+    "scripts": {
+        "phpstan": "phpstan analyse --level 9 src/ tests/",
+        "check-cs": "ecs check src --config tests/coding-standards.php",
+        "fix-cs": "ecs check src --config tests/coding-standards.php --fix"
+    },
+    "config": {
+        "allow-plugins": {
+            "symfony/thanks": true,
+            "dealerdirect/phpcodesniffer-composer-installer": true
+        }
+    }
+}
